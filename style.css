@@ -5,6 +5,7 @@
   min-height: 150vh;
   display: grid;
   grid-template-areas: "stack";
+  background-color: red;
 }
 
 .parallax > * {
