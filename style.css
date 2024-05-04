@@ -147,6 +147,12 @@ img {
   color: white;
   font-weight: 700;
   text-decoration: none;
+  transition: color 0.3s ease, color 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.primary-nav a:hover {
+  color: hsl(15, 100%, 50%);
 }
 
 .logo {
@@ -351,6 +357,7 @@ body {
 }
 #button-download {
   margin-top: 40%;
+  background: hsl(240, 100%, 50%);
 }
 .develop-p {
   margin-top: 5%;
