@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostrar contenedor al hacer clic</title>
+    <style>
+      .container {
+        display: none; /* Ocultar inicialmente los contenedores */
+        width: 100%;
+        height: 200px; /* Ajusta el tamaño según tus necesidades */
+        background-color: #f0f0f0;
+        margin-top: 10px;
+      }
+      .container.active {
+        display: block; /* Mostrar el contenedor cuando tenga la clase active */
+      }
+      .flex-container {
+        display: flex;
+      }
+      .flex-item {
+        cursor: pointer;
+        margin: 0 10px;
+        padding: 10px;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item" onclick="mostrarContenedor('containerA')">
+        Mostrar Container A
+      </div>
+      <div class="flex-item" onclick="mostrarContenedor('containerB')">
+        Mostrar Container B
+      </div>
+    </div>
+
+    <div class="container" id="containerA">Container A</div>
+    <div class="container" id="containerB">Container B</div>
+
+    <script>
+      function mostrarContenedor(idContenedor) {
+        var contenedores = document.querySelectorAll(".container");
+        for (var i = 0; i < contenedores.length; i++) {
+          contenedores[i].classList.remove("active");
+        }
+        document.getElementById(idContenedor).classList.add("active");
+      }
+    </script>
+  </body>
+</html>

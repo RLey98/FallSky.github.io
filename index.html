@@ -9,6 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="icon"
+      type="image/png"
+      sizes="196x196"
+      href="./public/assets/logo-fall-sky2.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,900&display=swap"
       rel="stylesheet"
     />
@@ -22,20 +34,26 @@
           <div class="wrapper">
             <div class="primary-header__inner">
               <div class="logo">
-                <img src="./public/assets/alien-logo.png" alt="" />
+                <img src="./public/assets/logo-fall-sky2.png" alt="" />
               </div>
               <nav class="primary-nav">
                 <ul role="list">
-                  <li><a href="#">HOME</a></li>
-                  <li><a href="#">STORY</a></li>
-                  <li><a href="#">CHARACTERS</a></li>
-                  <li><a href="#">DEVELOPMENT</a></li>
+                  <li><a href="#home">HOME</a></li>
+                  <li><a href="#story">STORY</a></li>
+                  <li><a href="#characters">CHARACTERS</a></li>
+                  <li><a href="#development">DEVELOPMENT</a></li>
                 </ul>
               </nav>
               <div class="flex-group" aria-label="social links">
-                <a href="#">X</a>
-                <a href="#">IG</a>
-                <a href="#">YT</a>
+                <a href="#"
+                  ><img src="./public/assets/twitter-x1.png" alt=""
+                /></a>
+                <a href="#"
+                  ><img src="./public/assets/instagram1.png" alt=""
+                /></a>
+                <a href="https://www.youtube.com/embed/tgbNymZ7vqY"
+                  ><img src="./public/assets/youtube1.png" alt=""
+                /></a>
               </div>
             </div>
           </div>
@@ -43,9 +61,11 @@
         <div class="hero">
           <div class="wrapper">
             <h1 class="hero__title">
-              <span>FALL SKY</span> Survive as long as you can!!!
+              <span>FALL SKY :</span> Survive as long as you can!!!
             </h1>
-            <button class="button">Next</button>
+            <a href="#button-download"
+              ><button class="button">Play Beta Now</button></a
+            >
           </div>
         </div>
 
@@ -110,48 +130,106 @@
         <div class="wrapper">
           <h2 class="story__title">CHARACTERS</h2>
           <div class="carousel">
-            <div class="conteiner">
+            <div class="container-character active" id="containerA">
               <div class="row">
                 <div class="mytext">
-                  <h3>SCOTT</h3>
+                  <h3>MAIN CHARACTER</h3>
                   <ul>
                     <li><strong>Name:</strong> Scott Way</li>
-                    <li><strong>Age:</strong> 22</li>
+                    <li><strong>Age:</strong> 17</li>
+                    <li><strong>Height:</strong> 1.75 m</li>
+                    <li><strong>Weight:</strong> 74.5 kg</li>
+                    <li><strong>Sex:</strong> Male</li>
                     <li><strong>Hobbies:</strong> Videogames</li>
                   </ul>
                   <p>
-                    Ordinary 17-year-old young man, student at Succhin High
-                    School, lover of video games, anime, and movies. No
-                    extraordinary power or ability.
+                    Ordinary 17-year-old young man, student at Tecs High School,
+                    lover of video games, anime, and movies. No extraordinary
+                    power or ability.
                   </p>
                 </div>
               </div>
             </div>
-            <div class="character-wrapper">
-              <div class="character-slide">
+            <div class="container-character" id="containerB">
+              <div class="row">
+                <div class="mytext">
+                  <h3>VILLAIN</h3>
+                  <ul>
+                    <li><strong>Name:</strong> MR. P</li>
+                    <li><strong>Age:</strong> 1,055</li>
+                    <li><strong>Height:</strong> 0.48 m</li>
+                    <li><strong>Weight:</strong> 20.4 kg</li>
+                    <li><strong>Sex:</strong> ?????</li>
+                    <li><strong>Hobbies:</strong> Conquer Worlds</li>
+                  </ul>
+                  <p>
+                    General and fleet commander of the Vandenreich intergalactic
+                    regime.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div style="display: none" class="character-wrapper">
+              <div
+                class="character-slide"
+                onclick="mostrarContenedor('containerA')"
+              >
                 <div class="card">
                   <img class="cardImg" src="./public/assets/guy_pixel1.png" />
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div
+                class="swiper-slide"
+                onclick="mostrarContenedor('containerB')"
+              >
                 <div class="card">
-                  <img class="cardImg" src="./public/assets/alien-pixel.webp" />
+                  <img class="cardImg" src="./public/assets/alien-logo.png" />
                 </div>
+              </div>
+            </div>
+            <div class="character-wrapper">
+              <div class="gallery">
+                <img
+                  src="./public/assets/Scott-img.png"
+                  alt=""
+                  onclick="mostrarContenedor('containerA')"
+                />
+                <img
+                  src="./public/assets/MrP-img.png"
+                  alt=""
+                  onclick="mostrarContenedor('containerB')"
+                />
               </div>
             </div>
           </div>
         </div>
       </main>
     </section>
-    <section id="contact">
+    <section id="development">
       <main class="main-content3">
         <div style="display: grid; justify-items: center" class="wrapper">
           <h2 class="story__title">DEVELOPMENT</h2>
-          <p>MADE IN</p>
+          <div class="container-frame">
+            <iframe
+              class="responsive-iframe"
+              src="https://www.youtube.com/embed/iT8TSgPAykI?si=81NWkIU95PFqWwWf"
+            ></iframe>
+          </div>
+          <a href="#button-download"
+            ><button class="button" id="button-download">
+              DOWNLOAD NOW
+            </button></a
+          >
+          <p class="develop-p">MADE IN</p>
           <img src="./public/assets/unity-logo.png" alt="" />
         </div>
       </main>
     </section>
     <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
