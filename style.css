@@ -147,12 +147,13 @@ img {
   color: white;
   font-weight: 700;
   text-decoration: none;
-  transition: color 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease, color 0.3s ease, transform 0.2s ease;
   transition-delay: 0.1s;
 }
 
 .primary-nav a:hover {
   color: hsl(15, 100%, 50%);
+  transform: scale(1.1);
 }
 
 .logo {
